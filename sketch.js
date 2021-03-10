@@ -237,6 +237,7 @@ function draw() {
       gameState = PLAY;
     }
   }
+  touches = []
 }//ending
   if (mousePressedOver(play)) {
     pauseButton.visible = true;
