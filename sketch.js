@@ -200,8 +200,6 @@ function setup() {
 function draw() {
   background(0);
 
-  if (touches.length > 0 || keyDown("space")) {
-   
   if (gameState === START) {
     //new code added
     readMe.visible = true;
@@ -232,13 +230,14 @@ function draw() {
     blueV.setVelocityEach(0, 0);
     yellowV.setVelocityEach(0, 0);
     //ambulance.visible = false;
+    if (touches.length > 0 || keyDown("space")) {
     if (mousePressedOver(readMe)) {
       readMe.visible = false;
       gameState = PLAY;
     }
+    touches =[]
   }
-  touches = []
-}//ending
+}
   if (mousePressedOver(play)) {
     pauseButton.visible = true;
     play.visible = false;
