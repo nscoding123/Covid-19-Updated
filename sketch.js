@@ -200,6 +200,8 @@ function setup() {
 function draw() {
   background(0);
 
+  if (touches.length > 0 || keyDown("space")) {
+   
   if (gameState === START) {
     //new code added
     readMe.visible = true;
@@ -235,6 +237,7 @@ function draw() {
       gameState = PLAY;
     }
   }
+}//ending
   if (mousePressedOver(play)) {
     pauseButton.visible = true;
     play.visible = false;
@@ -494,7 +497,7 @@ function draw() {
     ambulance1.lifetime = 0;
     ambulance2.lifetime = 0;
     ambulance3.lifetime = 0;
-    ambulance4.lifetime = 0;
+   // ambulance4.lifetime = 0;
     ambulance5.lifetime = 0;
     ambulance6.lifetime = 0;
     ambulance7.lifetime = 0;
